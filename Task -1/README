@@ -1,0 +1,24 @@
+1.Backup Script for Application Files
+
+This shell script (`backup.sh`) automates the process of backing up application files, compressing the backups, and cleaning up old backups.
+
+
+2. Create the Script
+
+-- Create a new file called `backup.sh` and paste the content into it.
+
+3.  Modify Script Configuration
+
+Edit the script to define the source directory (`SOURCE_DIR`) and the backup directory (`BACKUP_DIR`):
+  --`SOURCE_DIR`: The directory containing your application files (e.g., `/var/www/app` or `/home/user/app`).
+  --`BACKUP_DIR`: The directory where backups will be stored (e.g., `/backup`).
+
+4. Make the Script Executable
+
+-- chmod +x backup.sh
+
+5. Cron Job to Run the Script Automatically 
+
+-- Open the Crontab for editing --> crontab -e
+-- Add this follwing line to schedule the backup at midnight everyday --> 0 0 * * * /path/to/backup.sh
+
